@@ -18,4 +18,23 @@ func main() {
 	*p = *p / 37
 	fmt.Println(j)
 
+	a := 4
+	squareVal(a)
+	squareAdd(&a)
+	fmt.Println(&a)
+
+}
+
+func squareVal(v int) {
+
+	v *= v
+	fmt.Println(&v, v)
+
+}
+
+func squareAdd(p *int) {
+
+	*p *= *p
+	fmt.Println(p, *p)
+
 }
